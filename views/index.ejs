@@ -1,0 +1,4 @@
+<ul>
+	<% messages.forEach((msg) => { %> <%- include('../templates/message', {user:
+	msg.user, text: msg.text, added: msg.added}); %> <% }); %>
+</ul>
