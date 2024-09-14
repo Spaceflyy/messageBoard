@@ -1,4 +1,20 @@
-<ul>
-	<% messages.forEach((msg) => { %> <%- include('../templates/message', {user:
-	msg.user, text: msg.text, added: msg.added}); %> <% }); %>
-</ul>
+<html>
+	<head>
+		<title>Message Board</title>
+		<link rel="stylesheet" href="./styles.css" />
+	</head>
+	<body>
+		<h1>Public Message Board</h1>
+		<div class="wrapper">
+			<ul>
+				<% messages.forEach((msg) => { %> <%- include('../templates/message', {user:
+				msg.user, text: msg.text, added: msg.added}); %> <% }); %>
+			</ul>
+		</div>
+	</body>
+	<footer>
+		<a target="_blank" href="https://github.com/Spaceflyy"
+			>Spaceflyy <img src="./github-mark.svg" alt=""
+		/></a>
+	</footer>
+</html>
