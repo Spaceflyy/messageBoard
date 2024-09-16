@@ -3,12 +3,15 @@
 		<title>Message Board</title>
 		<link rel="stylesheet" href="./styles.css" />
 	</head>
-	<body>
+	<header>
 		<h1>Public Message Board</h1>
+	</header>
+	<body>
 		<div class="wrapper">
 			<ul>
-				<% messages.forEach((msg) => { %> <%- include('../templates/message', {user:
-				msg.user, text: msg.text, added: msg.added}); %> <% }); %>
+				<% messages.forEach((msg) => { %> <%- include('../templates/message',
+				{title: msg.title, user: msg.user, text: msg.text, added: msg.added}); %> <%
+				}); %>
 			</ul>
 		</div>
 	</body>
