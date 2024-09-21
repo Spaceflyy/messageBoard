@@ -2,7 +2,11 @@
 	<div class="msgInfo">
 		<h2><%= title %></h2>
 		<p><%= text %></p>
-		<p class="date"><%= added %></p>
+		<p class="date">
+			Posted by <%= user %> <br />
+			<%= added %>
+		</p>
 	</div>
-	<p id="postedBy">Posted by <%= user %></p>
+
+	<a  id="detailsBtn"  href=<%= `/${id}` %> ><button>Open</button></a>
 </li>

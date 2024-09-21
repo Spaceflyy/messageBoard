@@ -12,9 +12,8 @@ app.use(express.static(assetsPath));
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
-
-app.use("/", indexRouter);
 app.use("/new", newRouter);
+app.use("/", indexRouter);
 
 const PORT = 3030;
 app.listen(PORT, () => {

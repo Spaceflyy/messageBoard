@@ -41,9 +41,17 @@ li {
 	border-radius: 10px;
 	padding: 1rem;
 }
-#postedBy {
+#detailsBtn,
+#detailsBtn button {
+	border: none;
+	cursor: pointer;
 	margin-top: auto;
 	margin-left: auto;
+	padding: 10px;
+	border-radius: 5px;
+}
+#detailsBtn {
+	padding: 0px;
 }
 
 li p,
