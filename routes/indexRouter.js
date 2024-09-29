@@ -17,20 +17,19 @@ let messages = [
 		added: new Date().toString().slice(0, 21),
 	},
 ];
+
 router.get("/", (req, res) => {
 	res.render("index", { title: "Mini Messageboard", messages: messages });
 });
 
-router.get("/:msgId", (req, res, next) => {
+router.get("/messages/:msgId", (req, res, next) => {
 	const { msgId } = req.params;
-
 	res.render("index", {
 		messages: [messages[msgId]],
 	});
 });
 
 router.post("/new", (req, res) => {
-	console.log("dfgdg" + msgId);
 	messages.push({
 		msgId: messages.length,
 		title: req.body.title,
