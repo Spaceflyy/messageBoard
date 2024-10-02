@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use("/new", newRouter);
 app.use("/", indexRouter);
 app.get("*", (req, res) => {
-	res.render("404");
+	res.status(404).render("404");
 });
 const PORT = 3030;
 app.listen(PORT, () => {

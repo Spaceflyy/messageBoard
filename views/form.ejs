@@ -10,36 +10,41 @@
 	</head>
 	<%- include('../templates/header') %>
 	<body>
-		<div class="wrapper">
+		<div class="form-wrapper">
 			<form method="POST" action="/new">
 				<h1>Create message</h1>
-				<div class="label-wrapper">
-					<label for="title">Title: </label>
-					<input
-						required
-						placeholder="Enter a title for your message..."
-						type="text"
-						name="title"
-						id="title"
-					/>
+				<div id="formInputs">
+					<div class="label-wrapper">
+						<label for="title">Title: </label>
+						<input
+							required
+							placeholder="Enter a title for your message..."
+							type="text"
+							name="title"
+							id="title"
+						/>
+					</div>
+					<div class="label-wrapper">
+						<label for="user">Name: </label>
+						<input required type="text" name="user" id="user" />
+					</div>
+					<div class="label-wrapper">
+						<label for="message">Message: </label>
+						<input
+							required
+							placeholder="Enter your message here..."
+							type="text"
+							name="message"
+							id="message"
+						/>
+					</div>
 				</div>
-				<div class="label-wrapper">
-					<label for="user">Name: </label>
-					<input required type="text" name="user" id="user" />
+				<div id="formBtns">
+					<label for="cancelBtn"></label>
+					<a href="/"><button name="cancelBtn" type="button">Cancel</button></a>
+					<label for="submitBtn"></label
+					><input name="submitBtn" type="submit" value="Submit" />
 				</div>
-				<div class="label-wrapper">
-					<label for="message">Message: </label>
-					<input
-						required
-						placeholder="Enter your message here..."
-						type="text"
-						name="message"
-						id="message"
-					/>
-				</div>
-				<a href="/"><button type="button">Cancel</button></a>
-
-				<label for="submitBtn"></label><input type="submit" value="Submit" />
 			</form>
 		</div>
 	</body>

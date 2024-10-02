@@ -18,21 +18,41 @@ form {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-around;
+	height: 400px;
+	width: 400px;
+	border-radius: 10px;
+	background-color: var(--blue);
+}
+
+#formInputs {
+	font-size: 1.25rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: center;
+}
+#formBtns {
+	display: flex;
 	gap: 1rem;
-	background-color: orange;
-	padding: 1rem;
 }
 .label-wrapper {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	min-width: 100%;
 	gap: 0.5rem;
 }
 
-.wrapper {
+.wrapper,
+.form-wrapper {
 	display: flex;
 	justify-content: center;
+}
+
+.form-wrapper {
+	min-height: 85dvh;
+	align-items: center;
+	filter: drop-shadow(0px 3px 5px grey);
 }
 ul {
 	display: flex;
@@ -52,15 +72,15 @@ li {
 	filter: drop-shadow(0px 10px 5px grey);
 }
 
-#detailsBtn,
-#detailsBtn button,
-header a button {
+button,
+input[type="submit"] {
 	border: none;
 	cursor: pointer;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: var(--white);
 }
+
 #detailsBtn {
 	padding: 0px;
 	margin-top: auto;
