@@ -7,6 +7,9 @@
 			<%= added %>
 		</p>
 	</div>
-
-	<a  id="detailsBtn"  href=<%= `/messages/${msgId}` %> ><button>Open</button></a>
+	<% if(single){%>
+		<a  id="detailsBtn"  href=<%= `/` %> ><button>Back</button></a>
+	<%} else {%>
+		<a  id="detailsBtn"  href=<%= `/messages/${msgId}` %> ><button>Open</button></a>
+	<%}%>
 </li>

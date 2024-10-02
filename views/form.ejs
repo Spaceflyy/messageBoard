@@ -4,6 +4,9 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="shortcut icon" href="#" />
 		<link rel="stylesheet" href="./styles.css" />
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+		</style>
 	</head>
 	<%- include('../templates/header') %>
 	<body>
@@ -13,6 +16,7 @@
 				<div class="label-wrapper">
 					<label for="title">Title: </label>
 					<input
+						required
 						placeholder="Enter a title for your message..."
 						type="text"
 						name="title"
@@ -21,17 +25,19 @@
 				</div>
 				<div class="label-wrapper">
 					<label for="user">Name: </label>
-					<input type="text" name="user" id="user" />
+					<input required type="text" name="user" id="user" />
 				</div>
 				<div class="label-wrapper">
 					<label for="message">Message: </label>
 					<input
+						required
 						placeholder="Enter your message here..."
 						type="text"
 						name="message"
 						id="message"
 					/>
 				</div>
+				<a href="/"><button type="button">Cancel</button></a>
 
 				<label for="submitBtn"></label><input type="submit" value="Submit" />
 			</form>

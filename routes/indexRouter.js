@@ -19,13 +19,17 @@ let messages = [
 ];
 
 router.get("/", (req, res) => {
-	res.render("index", { title: "Mini Messageboard", messages: messages });
+	res.render("index", {
+		messages: messages,
+		single: false,
+	});
 });
 
 router.get("/messages/:msgId", (req, res, next) => {
 	const { msgId } = req.params;
 	res.render("index", {
 		messages: [messages[msgId]],
+		single: true,
 	});
 });
 

@@ -1,6 +1,6 @@
 :root {
-	--light-blue: #e9f1fa;
-	--bright-blue: #45c5f0;
+	--cream: #eeeadd;
+	--blue: #7ea5a4;
 	--white: #ffffff;
 }
 
@@ -10,7 +10,8 @@ body {
 	flex-direction: column;
 	margin: 0;
 	padding: 0;
-	background-color: var(--light-blue);
+	background-color: var(--cream);
+	font-family: "Roboto", sans-serif;
 }
 
 form {
@@ -47,21 +48,23 @@ li {
 	background-color: grey;
 	border-radius: 10px;
 	padding: 1rem;
-	background-color: var(--bright-blue);
+	background-color: var(--blue);
 	filter: drop-shadow(0px 10px 5px grey);
 }
+
 #detailsBtn,
-#detailsBtn button {
+#detailsBtn button,
+header a button {
 	border: none;
 	cursor: pointer;
-	margin-top: auto;
-	margin-left: auto;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: var(--white);
 }
 #detailsBtn {
 	padding: 0px;
+	margin-top: auto;
+	margin-left: auto;
 }
 
 li p,
@@ -84,15 +87,17 @@ header {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-color: var(--bright-blue);
+	background-color: var(--blue);
 	margin-top: auto;
 	min-height: 40px;
 }
 header {
+	font-size: 0.8rem;
 	position: sticky;
 	margin-top: 0px;
 	top: 0;
 	filter: drop-shadow(0px 3px 5px grey);
+	gap: 4rem;
 }
 footer img {
 	width: auto;
