@@ -1,47 +1,12 @@
 const { Router } = require("express");
 const router = Router();
+const messagesController = require("../controllers/messagesController");
+router.get("/", messagesController.getUserMessages);
+router.get("/messages/:msgId", messagesController.findMessage);
+router.post("/new", messagesController.addMessage);
 
-let messages = [
-	{
-		msgId: 0,
-		title: "Something to say",
-		text: "Hi there!",
-		user: "Amando",
-		added: new Date().toString().slice(0, 21),
-	},
-	{
-		msgId: 1,
-		title: "An important update!",
-		text: "Hello World!",
-		user: "Charles",
-		added: new Date().toString().slice(0, 21),
-	},
-];
-
-router.get("/", (req, res) => {
-	res.render("index", {
-		messages: messages,
-		single: false,
-	});
+router.use((err, req, res, next) => {
+	console.error(err);
+	res.status(404).render("404");
 });
-
-router.get("/messages/:msgId", (req, res, next) => {
-	const { msgId } = req.params;
-	res.render("index", {
-		messages: [messages[msgId]],
-		single: true,
-	});
-});
-
-router.post("/new", (req, res) => {
-	messages.push({
-		msgId: messages.length,
-		title: req.body.title,
-		text: req.body.message,
-		user: req.body.user,
-		added: new Date().toString().slice(0, 21),
-	});
-	res.redirect("/");
-});
-
 module.exports = router;

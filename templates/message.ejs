@@ -4,12 +4,12 @@
 		<p><%= text %></p>
 		<p class="date">
 			Posted by <%= user %> <br />
-			<%= added %>
+			<%= added.toString().slice(0, 21) %>
 		</p>
 	</div>
 	<% if(single){%>
 		<a  id="detailsBtn"  href=<%= `/` %> ><button>Back</button></a>
 	<%} else {%>
-		<a  id="detailsBtn"  href=<%= `/messages/${msgId}` %> ><button>Open</button></a>
+		<a  id="detailsBtn"  href=<%= `/messages/${msgId-1}` %> ><button>Open</button></a>
 	<%}%>
 </li>

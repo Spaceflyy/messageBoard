@@ -13,8 +13,8 @@
 		<div class="wrapper">
 			<ul>
 				<% messages.forEach((msg) => { %> <%- include('../templates/message',
-				{msgId: msg.msgId, title: msg.title, user: msg.user, text: msg.text, added:
-				msg.added}, single); %> <% }); %>
+				{msgId: msg.id, title: msg.title, user: msg.username, text: msg.text, added:
+				msg.posting_date}, single); %> <% }); %>
 			</ul>
 		</div>
 	</body>
